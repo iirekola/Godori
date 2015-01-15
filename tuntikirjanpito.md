@@ -8,4 +8,4 @@ Projektin luominen NetBeansiin, omat ongelmansa siinä... Ei luonut gitignore ti
 >  junit:junit:jar:4.10
 > org.hamcrest:hamcrest-core:jar:1.1
 
-tästä tää lähtee.
+tästä tää lähtee. Tänään siis ekan viikon asiat (miinus githubiin liittyvät, jotka tein tiistaina). 
