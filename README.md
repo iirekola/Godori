@@ -1,2 +1,0 @@
-# Godori
-HAhaa, ei olekaan!
