@@ -9,3 +9,9 @@ Projektin luominen NetBeansiin, omat ongelmansa siinä... Ei luonut gitignore ti
 > org.hamcrest:hamcrest-core:jar:1.1
 
 tästä tää lähtee. Tänään siis ekan viikon asiat (miinus githubiin liittyvät, jotka tein tiistaina). 
+
+18.1.2015 20-21
+Luokkakaavion luonnostelua. Projektin aloittaminen tökkii. Tuntuu, ettei useankan luonnoksen jälkeen tullut tyydyttävää ratkaisua.
+
+19.1.2015 15-16
+Lisää luonnostelua. Vieläkään ei tunnu oikealta. Annan hautua, mutta hiukan alkaa aikataulut kuumotella jos ei pian inspaa.
