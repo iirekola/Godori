@@ -22,5 +22,18 @@ Epätoivoista räpeltämistä, jotta clean and build toimisi. Neuvojen kysymisen
 21.1.2015 00-01
 Räpel räpel räpel. MUTTA. Onnistuin fiksaamaan käyttöoikeudet, woop. Ja tsekkailin taas luokkakaaviota.
 
-22.1.2015 20-
-Jee, luokkakaavion piirtämistä ja ohjelmointia(viimein!)
+22.1.2015 20-01
+Jee, luokkakaavion piirtämistä ja ohjelmointia(viimein!) Kello on nyt liikaa. Yritin generoida PITiä, mutta
+
+> BUILD FAILURE
+------------------------------------------------------------------------
+Total time: 32.904s
+Finished at: Fri Jan 23 00:42:30 EET 2015
+Final Memory: 7M/19M
+------------------------------------------------------------------------
+Failed to execute goal org.pitest:pitest-maven:0.30:mutationCoverage (default-cli) on project Godori: Execution default-cli of goal org.pitest:pitest-maven:0.30:mutationCoverage failed: No mutations found. This probably means there is an issue with either the supplied classpath or filters.
+See http://pitest.org for more details.
+-> [Help 1]
+>
+
+johtuneeko siitä, että testejä on liian vähän vai jostain muusta, sitä selvitellään huomenna.
