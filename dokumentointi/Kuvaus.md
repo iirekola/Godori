@@ -14,4 +14,5 @@ Pelaajan toiminnot:
 - uuden pelin aloittaminen
 - kortin pelaaminen
 - uuden kierroksen aloittaminen
+- luovuttaminen
 
