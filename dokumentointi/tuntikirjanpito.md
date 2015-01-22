@@ -15,3 +15,12 @@ Luokkakaavion luonnostelua. Projektin aloittaminen tökkii. Tuntuu, ettei useank
 
 19.1.2015 15-16
 Lisää luonnostelua. Vieläkään ei tunnu oikealta. Annan hautua, mutta hiukan alkaa aikataulut kuumotella jos ei pian inspaa.
+
+21.1.2015 13-15
+Epätoivoista räpeltämistä, jotta clean and build toimisi. Neuvojen kysymisen ja syvällisen googlettelun jälkeen ilmenee, että could not run program, error=13 johtuu riittämättömistä oikeuksista. Yritin tuloksetta fiksata.
+
+21.1.2015 00-01
+Räpel räpel räpel. MUTTA. Onnistuin fiksaamaan käyttöoikeudet, woop. Ja tsekkailin taas luokkakaaviota.
+
+22.1.2015 20-
+Jee, luokkakaavion piirtämistä ja ohjelmointia(viimein!)
