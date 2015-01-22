@@ -6,3 +6,12 @@
 Peliin kuuluu 48 korttia, joilla on kaikilla maa ja tyyppi, jotkin korteista edustavat useampaa tyyppiä. Jokaiseen maahan kuuluu neljä erilaista korttia. Pelatessa kortin ominaisuudet määrää maa, pistelaskussa sen tyyppi. Peli etenee erä kerrallaan ja erän aikan kertyneet pisteet jaetaan aina erän lopussa. Peli päättyy sen erän jälkeen, jossa jompikumpi pelaajista saavuttaa 50 pistettä.
 
 **Säännöt:** http://www.neopets.com/games/godori/rules.phtml
+
+**Käyttäjät:** pelaaja(t)
+
+**Käyttäjien toiminnot:**
+Pelaajan toiminnot:
+- uuden pelin aloittaminen
+- kortin pelaaminen
+- uuden kierroksen aloittaminen
+
