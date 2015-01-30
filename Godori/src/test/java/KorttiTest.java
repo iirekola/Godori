@@ -1,5 +1,7 @@
 
 import godori.Kortti;
+import godori.Nostopakka;
+import godori.Sijainti;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -34,5 +36,19 @@ public class KorttiTest {
         
         assertEquals("Altador", vastaus); 
     }
+    
+    @Test
+    public void asettaaSijainnin() {
+        Sijainti s = new Nostopakka();
+        k.asetaSijainti(s);
+        
+        assertEquals(s, k.getSijainti());
+    }
+    
+    @Test
+    public void getSijaintiToimiiKunEiSijaintia() {
+        assertEquals(null, k.getSijainti());
+    }
+    
     
 }

@@ -3,14 +3,22 @@ package godori;
 
 import java.util.ArrayList;
 
-public class Korttipakka {
+public class Korttipakka implements Sijainti{
     private ArrayList<Kortti> kortit;
     
     public Korttipakka(ArrayList<Kortti> kortit) {
         this.kortit = kortit;
+        
+        for (Kortti kortti : kortit) {
+            kortti.asetaSijainti(this);
+        }
     }
     
     public String toString() {
+        return "korttipakka";
+    }
+    
+    public String luetteleKortit() {
         String palautus = "Korttipakan sisältämät kortit:";
         
         if (kortit.isEmpty()) {
@@ -22,5 +30,9 @@ public class Korttipakka {
         }
         
         return palautus;
+    }
+    
+    public void jaaKortit() {
+        // jakaa kortit
     }
 }
