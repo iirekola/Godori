@@ -11,10 +11,14 @@ public class Korttipakka {
     }
     
     public String toString() {
-        String palautus = "";
+        String palautus = "Korttipakan sisältämät kortit:";
+        
+        if (kortit.isEmpty()) {
+            return "  Pakassa ei ole yhtään korttia.";
+        }
         
         for (Kortti kortti : kortit) {
-            palautus += kortti;
+            palautus += "\n  " + kortti.toString();
         }
         
         return palautus;

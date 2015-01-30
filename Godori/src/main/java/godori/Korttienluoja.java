@@ -89,7 +89,8 @@ public class Korttienluoja {
         korttipakka.add(new MaisemaKortti("Mystery Island, maisema2", "Mystery Island", false));
     }
     
-    public ArrayList<Kortti> getKorttipakka() {
+    public ArrayList<Kortti> UusiPakka() {
+        luoKortit();
         return korttipakka;
     }
 }
