@@ -35,4 +35,5 @@ public class Korttipakka implements Sijainti{
     public void jaaKortit() {
         // jakaa kortit
     }
+
 }

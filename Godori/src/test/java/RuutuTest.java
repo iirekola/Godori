@@ -1,4 +1,6 @@
 
+import godori.Kortti;
+import godori.Ruutu;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Before;
@@ -10,7 +12,9 @@ public class RuutuTest {
     
     public RuutuTest() {
     }
-    Ruutu r;
+    Ruutu r = new Ruutu("r1");
+    Kortti k = new Kortti("testi", "Altador");
+    Kortti k2 = new Kortti("testi2", "Altador");
     
     @Before
     public void setUp() {
@@ -20,9 +24,47 @@ public class RuutuTest {
     public void tearDown() {
     }
 
-    // TODO add test methods here.
-    // The methods must be annotated with annotation @Test. For example:
-    //
-    // @Test
-    // public void hello() {}
+    @Test
+    public void asetaKorttiToimii() {
+        r.asetaKortti(k);
+        
+        assertEquals("Ruudussa r1: testi", r.luetteleKortit());
+    }
+    
+    @Test
+    public void asetaKorttiToimiiKunRuudussaOnJoKortti() {
+        r.asetaKortti(k);
+        r.asetaKortti(k2);
+        
+        assertEquals("Ruudussa r1: testi2", r.luetteleKortit());
+    }
+    
+    @Test
+    public void asetaKorttiKunRuudussaOnJoKorttiPoistaaVanhanKortinSijainnin() {
+        r.asetaKortti(k);
+        r.asetaKortti(k2);
+        
+        assertEquals(null, k.getSijainti());
+    }
+    
+    @Test
+    public void luetteleKortitKunRuutuOnTyhja() {
+        assertEquals("Ruutu r1 on tyhjä", r.luetteleKortit());
+    }
+    
+    @Test
+    public void poistaKorttiToimii() {
+        r.asetaKortti(k);
+        r.poistaKortti();
+        
+        assertEquals("Ruutu r1 on tyhjä", r.luetteleKortit());
+    }
+    
+    @Test
+    public void poistaKorttiPoistaaKortinSijainnin() {
+        r.asetaKortti(k);
+        r.poistaKortti();
+        
+        assertEquals(null, k.getSijainti());
+    }
 }

@@ -13,17 +13,17 @@ public class Paaohjelma {
     public static void main(String[] args) {
         
         Nostopakka n = new Nostopakka();
-        Ruutu r = new Ruutu();
+        Ruutu r = new Ruutu("r1");
         
         Kortti k1 = new Kortti("Pasi", "Hertta");
         Kortti k2  = new Kortti("Kaisa", "Risti");
         System.out.println("Korttien sijainnit: " + k1 + ": " + k1.getSijainti() + ", " + k2 + ": " + k2.getSijainti());
         
         n.lisaaKortti(k1);
-        k2.asetaSijainti(r);
+        r.asetaKortti(k2);
         
         System.out.println("Korttien sijainnit: " + k1 + ": " + k1.getSijainti() + ", " + k2 + ": " + k2.getSijainti());
-        
+        System.out.println(r.luetteleKortit());
         
     }
     
