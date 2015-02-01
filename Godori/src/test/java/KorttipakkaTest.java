@@ -52,7 +52,7 @@ public class KorttipakkaTest {
         pakka = new Korttipakka(k);
         String verrattava = pakka.luetteleKortit();
 
-        assertEquals("  Pakassa ei ole yhtään korttia.", verrattava);
+        assertEquals("Korttipakassa ei ole yhtään korttia.", verrattava);
     }
     
     @Test

@@ -22,7 +22,7 @@ public class Korttipakka implements Sijainti{
         String palautus = "Korttipakan sisältämät kortit:";
         
         if (kortit.isEmpty()) {
-            return "  Pakassa ei ole yhtään korttia.";
+            return "Korttipakassa ei ole yhtään korttia.";
         }
         
         for (Kortti kortti : kortit) {

@@ -3,36 +3,26 @@ package ohhaawesomness.godori;
 import godori.Kortti;
 import godori.Korttienluoja;
 import godori.Korttipakka;
+import godori.Nostopakka;
+import godori.Ruutu;
+import godori.Sijainti;
 import java.util.ArrayList;
 
 public class Paaohjelma {
 
     public static void main(String[] args) {
         
-       
-//        k.add(new Kortti("testi2", "Altador"));
-//        
-//        Korttipakka pakka = new Korttipakka(k);
-//       // System.out.println(pakka);
-//        
-//        for (Kortti kortti : k) {
-//            System.out.println(kortti.getSijainti());
-//        }
+        Nostopakka n = new Nostopakka();
+        Ruutu r = new Ruutu();
         
+        Kortti k1 = new Kortti("Pasi", "Hertta");
+        Kortti k2  = new Kortti("Kaisa", "Risti");
+        System.out.println("Korttien sijainnit: " + k1 + ": " + k1.getSijainti() + ", " + k2 + ": " + k2.getSijainti());
         
-        Kortti kortti = new Kortti("testi", "Altador");
-        System.out.println(kortti.getMaa() + "\n");
-        System.out.println(kortti.toString() +"\n");
-        System.out.println(kortti.getSijainti() +"\n");
+        n.lisaaKortti(k1);
+        k2.asetaSijainti(r);
         
-        ArrayList<Kortti> k = new ArrayList<Kortti>();
-        k.add(kortti);
-        
-        System.out.println("lisättiin listaan\n");
-        System.out.println(kortti.getSijainti() +"\n");
-        
-        Korttipakka pakka = new Korttipakka(k);
-        System.out.println(kortti.getSijainti() +"\n");
+        System.out.println("Korttien sijainnit: " + k1 + ": " + k1.getSijainti() + ", " + k2 + ": " + k2.getSijainti());
         
         
     }
