@@ -20,7 +20,7 @@ public class Paaohjelma {
         System.out.println("Korttien sijainnit: " + k1 + ": " + k1.getSijainti() + ", " + k2 + ": " + k2.getSijainti());
         
         n.lisaaKortti(k1);
-        r.asetaKortti(k2);
+        r.lisaaKortti(k2);
         
         System.out.println("Korttien sijainnit: " + k1 + ": " + k1.getSijainti() + ", " + k2 + ": " + k2.getSijainti());
         System.out.println(r.luetteleKortit());

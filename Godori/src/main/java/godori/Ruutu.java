@@ -22,7 +22,7 @@ public class Ruutu implements Sijainti {
         return "Ruudussa " + this.nimi + ": " + this.kortti.toString();
     }
     
-    public void asetaKortti(Kortti kortti) {
+    public void lisaaKortti(Kortti kortti) {
         if (this.kortti != null) {
             this.kortti.asetaSijainti(null);
         }
@@ -31,8 +31,10 @@ public class Ruutu implements Sijainti {
         kortti.asetaSijainti(this);
     }
     
-    public void poistaKortti() {
+    public void poistaKortti(Kortti kortti) {
         this.kortti.asetaSijainti(null);
         this.kortti = null;
     }
+
+    
 }

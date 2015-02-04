@@ -36,4 +36,14 @@ public class Korttipakka implements Sijainti{
         // jakaa kortit
     }
 
+    @Override
+    public void lisaaKortti(Kortti kortti) {    
+        // nothing happens
+    }
+
+    @Override
+    public void poistaKortti(Kortti kortti) {
+        // nothing happens
+    }
+    
 }

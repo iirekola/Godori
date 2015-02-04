@@ -34,4 +34,9 @@ public class Nostopakka implements Sijainti {
         
         return palautus;
     }
+    
+    public void poistaKortti(Kortti kortti) {
+        this.nostettavissaOlevat.remove(kortti);
+        kortti.asetaSijainti(null);
+    }
 }   

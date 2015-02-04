@@ -1,3 +1,5 @@
+package godori;
+
 
 import godori.Kortti;
 import godori.Korttipakka;

@@ -1,3 +1,5 @@
+package godori;
+
 
 import godori.Kortti;
 import godori.Ruutu;
@@ -25,24 +27,24 @@ public class RuutuTest {
     }
 
     @Test
-    public void asetaKorttiToimii() {
-        r.asetaKortti(k);
+    public void lisaaKorttiToimii() {
+        r.lisaaKortti(k);
         
         assertEquals("Ruudussa r1: testi", r.luetteleKortit());
     }
     
     @Test
-    public void asetaKorttiToimiiKunRuudussaOnJoKortti() {
-        r.asetaKortti(k);
-        r.asetaKortti(k2);
+    public void lisaaKorttiToimiiKunRuudussaOnJoKortti() {
+        r.lisaaKortti(k);
+        r.lisaaKortti(k2);
         
         assertEquals("Ruudussa r1: testi2", r.luetteleKortit());
     }
     
     @Test
-    public void asetaKorttiKunRuudussaOnJoKorttiPoistaaVanhanKortinSijainnin() {
-        r.asetaKortti(k);
-        r.asetaKortti(k2);
+    public void lisaaKorttiKunRuudussaOnJoKorttiPoistaaVanhanKortinSijainnin() {
+        r.lisaaKortti(k);
+        r.lisaaKortti(k2);
         
         assertEquals(null, k.getSijainti());
     }
@@ -54,16 +56,16 @@ public class RuutuTest {
     
     @Test
     public void poistaKorttiToimii() {
-        r.asetaKortti(k);
-        r.poistaKortti();
+        r.lisaaKortti(k);
+        r.poistaKortti(null);
         
         assertEquals("Ruutu r1 on tyhjä", r.luetteleKortit());
     }
     
     @Test
     public void poistaKorttiPoistaaKortinSijainnin() {
-        r.asetaKortti(k);
-        r.poistaKortti();
+        r.lisaaKortti(k);
+        r.poistaKortti(null);
         
         assertEquals(null, k.getSijainti());
     }
