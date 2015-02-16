@@ -18,13 +18,6 @@ public class RuutuTest {
     Kortti k = new Kortti("testi", "Altador");
     Kortti k2 = new Kortti("testi2", "Altador");
     
-    @Before
-    public void setUp() {
-    }
-    
-    @After
-    public void tearDown() {
-    }
     
     @Test
     public void toStringToimii() {

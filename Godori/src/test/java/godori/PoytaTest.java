@@ -58,12 +58,12 @@ public class PoytaTest {
     }
     
     @Test
-    public void luetteleKortitKunRuutuOnTyhja() {
+    public void luetteleKortitKunPoytaOnTyhja() {
         assertEquals("Pöydässä ei ole yhtään korttia.", p.luetteleKortit());
     }
     
     @Test
-    public void poistaKorttiToimiiKunRuudussaKyseinenKortti() {
+    public void poistaKorttiToimiiKunPoydassaKyseinenKortti() {
         p.lisaaKortti(k);
         p.poistaKortti(k);
         
@@ -71,7 +71,7 @@ public class PoytaTest {
     }
     
     @Test
-    public void poistaKorttiToimiiKunRuudussaEiKyseistäKorttia() {
+    public void poistaKorttiToimiiKunPoydassaEiKyseistäKorttia() {
         p.lisaaKortti(k);
         p.poistaKortti(k2);
         
