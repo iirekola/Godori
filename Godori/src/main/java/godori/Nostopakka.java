@@ -12,7 +12,7 @@ public class Nostopakka implements Sijainti {
     }
     
     public String toString() {
-        return "nostopakka";
+        return "Nostopakka";
     }
     
     public void lisaaKortti(Kortti kortti) {
@@ -36,7 +36,9 @@ public class Nostopakka implements Sijainti {
     }
     
     public void poistaKortti(Kortti kortti) {
-        this.nostettavissaOlevat.remove(kortti);
-        kortti.asetaSijainti(null);
+        if (this.nostettavissaOlevat.contains(kortti)) {
+            this.nostettavissaOlevat.remove(kortti);
+            kortti.asetaSijainti(null);
+        }
     }
 }   

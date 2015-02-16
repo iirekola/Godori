@@ -15,7 +15,7 @@ public class NostopakkaTest {
     
     public NostopakkaTest() {
     }
-    Nostopakka pakka;
+    Nostopakka pakka = new Nostopakka();
     
     @Before
     public void setUp() {
@@ -24,10 +24,14 @@ public class NostopakkaTest {
     @After
     public void tearDown() {
     }
+    
+    @Test
+    public void toStringToimii() {
+        assertEquals("Nostopakka", pakka.toString());
+    }
 
     @Test
     public void tyhjaPakkaTulostuuOikein() {
-        pakka = new Nostopakka();
         String verrattava = pakka.luetteleKortit();
 
         assertEquals("Nostopakassa ei ole yhtään korttia.", verrattava);
@@ -35,7 +39,6 @@ public class NostopakkaTest {
     
     @Test
     public void korttienTulostusToimiiYhdella() {
-        pakka = new Nostopakka();
         pakka.lisaaKortti(new Kortti("testi", "Altador"));
         
         String verrattava = pakka.luetteleKortit();
@@ -45,8 +48,6 @@ public class NostopakkaTest {
 
     @Test
     public void korttienTulostusToimiiUsealla() {
-        pakka = new Nostopakka();
-        
         pakka.lisaaKortti(new Kortti("testi", "Altador"));
         pakka.lisaaKortti(new Kortti("testi2", "Altador"));
         pakka.lisaaKortti(new Kortti("testi3", "Altador"));
@@ -54,5 +55,33 @@ public class NostopakkaTest {
         String verrattava = pakka.luetteleKortit();
 
         assertEquals("Nostopakan sisältämät kortit:\n  testi\n  testi2\n  testi3", verrattava);
+    }
+    
+    @Test
+    public void kortinAsetusToimii() {
+        Kortti testi = new Kortti("testi", "Altador");
+        pakka.lisaaKortti(testi);
+        
+        assertEquals("Nostopakka", testi.getSijainti().toString());
+    }
+    
+    @Test
+    public void korttiPoistuuPakasta() {
+        Kortti testi = new Kortti("testi", "Altador");
+        pakka.lisaaKortti(testi);
+        
+        pakka.poistaKortti(testi);
+        
+        assertEquals("Nostopakassa ei ole yhtään korttia.", pakka.luetteleKortit());
+    }
+    
+    @Test
+    public void poistetunKortinSijaintiNull() {
+        Kortti testi = new Kortti("testi", "Altador");
+        pakka.lisaaKortti(testi);
+        
+        pakka.poistaKortti(testi);
+        
+        assertEquals(null, testi.getSijainti());
     }
 }
