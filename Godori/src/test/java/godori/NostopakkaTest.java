@@ -84,4 +84,17 @@ public class NostopakkaTest {
         
         assertEquals(null, testi.getSijainti());
     }
+    
+    @Test
+    public void onTyhjaToimiiKunTyhja() {
+        assertTrue(pakka.onTyhja());
+    }
+    
+    @Test
+    public void onTyhjaToimiiKunEiOleTyhja() {
+        Kortti testi = new Kortti("testi", "Altador");
+        pakka.lisaaKortti(testi);
+        
+        assertFalse(pakka.onTyhja());
+    }
 }

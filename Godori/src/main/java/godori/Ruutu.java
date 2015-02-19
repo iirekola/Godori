@@ -44,7 +44,7 @@ public class Ruutu implements Sijainti {
             korttilista += "\n  " + kortti.toString();
         }
         
-        return "Ruudussa " + this.nimi + ":" + korttilista;
+        return korttilista;
     }
     
     public void lisaaKortti(Kortti kortti) {
@@ -52,6 +52,10 @@ public class Ruutu implements Sijainti {
         this.maa = kortti.getMaa();
         
         kortti.asetaSijainti(this);
+    }
+    
+    public List<Kortti> getKortit() {
+        return this.kortit;
     }
     
     public void poistaKortti(Kortti kortti) {

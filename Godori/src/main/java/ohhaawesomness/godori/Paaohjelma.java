@@ -8,33 +8,41 @@ import godori.Korttipakka;
 import godori.MaisemaKortti;
 import godori.NeopetKortti;
 import godori.Nostopakka;
+import godori.Pelaaja;
+import godori.Pelilogiikka;
 import godori.PetpetKortti;
 import godori.Poyta;
 import godori.Ruutu;
 import godori.Sijainti;
 import godori.Voittopakka;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Paaohjelma {
 
     public static void main(String[] args) {
-        Kortti n = new NeopetKortti("Testi1", "Lost Desert", false);
-        Kortti p = new PetpetKortti("Testi2", "Faerieland", true, false);
-        Kortti a = new AltadorCupKortti("Testi3", "Roo Island", "vaakuna");
-        Kortti m = new MaisemaKortti("Testi4", "Faerieland", false);
-        
-        Voittopakka v = new Voittopakka();
-        v.lisaaKortti(p);
-        v.lisaaKortti(m);
-        v.lisaaKortti(a);
-        v.lisaaKortti(n);
-        
-        System.out.println(v.luetteleKortit());
+       Pelilogiikka godori = new Pelilogiikka();
+       
+       godori.kaynnista();
+       
+       
+//
+//        Kasi k = new Kasi();
 //        
-//        v.poistaKortti(n);
-//        
-//        System.out.println(v.luetteleKortit());
-//        System.out.println("n sijainti: " + n.getSijainti() + ", p sijainti: " + p.getSijainti());
+//    Kortti n = new NeopetKortti("Testi1", "Testi1", false);
+//    Kortti p = new PetpetKortti("Testi2", "Testi2", true, false);
+//    Kortti a = new AltadorCupKortti("Testi3", "Testi3", "Testi");
+//    Kortti m = new MaisemaKortti("Testi4", "Testi4", false);
+//    
+//    k.lisaaKortti(n);
+//    k.lisaaKortti(p);
+//    k.lisaaKortti(a);
+//    k.lisaaKortti(m);
+//    
+//        System.out.println(k.luetteleKortit());
+        
+        
+        
     }
 
 }

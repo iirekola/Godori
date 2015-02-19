@@ -29,7 +29,7 @@ public class KasiTest {
     public void lisaaKorttiToimii() {
         kasi.lisaaKortti(k);
         
-        assertEquals("Kädessä olevat kortit:\n  testi", kasi.luetteleKortit());
+        assertEquals("Kädessä olevat kortit:\n1:  testi", kasi.luetteleKortit());
     }
     
     @Test
@@ -44,7 +44,7 @@ public class KasiTest {
         kasi.lisaaKortti(k);
         kasi.lisaaKortti(k2);
         
-        assertEquals("Kädessä olevat kortit:\n  testi\n  testi2", kasi.luetteleKortit());
+        assertEquals("Kädessä olevat kortit:\n1:  testi\n2:  testi2", kasi.luetteleKortit());
     }
     
     @Test
@@ -60,7 +60,7 @@ public class KasiTest {
         kasi.lisaaKortti(k);
         kasi.poistaKortti(k2);
         
-        assertEquals("Kädessä olevat kortit:\n  testi", kasi.luetteleKortit());
+        assertEquals("Kädessä olevat kortit:\n1:  testi", kasi.luetteleKortit());
     }
     
     @Test
@@ -77,6 +77,6 @@ public class KasiTest {
         kasi.lisaaKortti(k2);
         kasi.poistaKortti(k2);
         
-        assertEquals("Kädessä olevat kortit:\n  testi", kasi.luetteleKortit());
+        assertEquals("Kädessä olevat kortit:\n1:  testi", kasi.luetteleKortit());
     }
 }

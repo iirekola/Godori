@@ -30,7 +30,7 @@ public class PoytaTest {
         p.lisaaKortti(k);
         
         assertEquals("Pöydässä olevat kortit:\n" +
-                            "Ruudussa 1:\n" +
+                            "\n" +
                             "  testi", p.luetteleKortit());
     }
     
@@ -40,7 +40,7 @@ public class PoytaTest {
         p.lisaaKortti(k2);
         
         assertEquals("Pöydässä olevat kortit:\n" +
-                            "Ruudussa 1:\n" +
+                            "\n" +
                             "  testi\n" +
                             "  testi2", p.luetteleKortit());
     }
@@ -51,9 +51,9 @@ public class PoytaTest {
         p.lisaaKortti(k3);
         
         assertEquals("Pöydässä olevat kortit:\n" +
-                        "Ruudussa 1:\n" +
+                        "\n" +
                         "  testi\n" +
-                        "Ruudussa 2:\n" +
+                        "\n" +
                         "  testi3", p.luetteleKortit());
     }
     
@@ -76,7 +76,7 @@ public class PoytaTest {
         p.poistaKortti(k2);
         
         assertEquals("Pöydässä olevat kortit:\n" +
-                            "Ruudussa 1:\n" +
+                            "\n" +
                             "  testi", p.luetteleKortit());
     }
     
@@ -87,8 +87,20 @@ public class PoytaTest {
         p.poistaKortti(k2);
         
         assertEquals("Pöydässä olevat kortit:\n" +
-                            "Ruudussa 1:\n" +
+                            "\n" +
                             "  testi", p.luetteleKortit());
+    }
+    
+    @Test
+    public void onTyhjaToimiiKunTyhja() {
+        assertTrue(p.onTyhja());
+    }
+    
+    @Test
+    public void onTyhjaToimiiKunEiOleTyhja() {
+        p.lisaaKortti(k);
+        
+        assertFalse(p.onTyhja());
     }
 
 }

@@ -20,7 +20,7 @@ public class Kasi implements Sijainti {
         int korttienMaara = 0;
         for (Kortti kortti : kortit) {
             if (kortti != null) {
-                palautus += "\n  " + kortti.toString();
+                palautus += "\n" + (korttienMaara + 1) +":  " + kortti.toString();
                 korttienMaara++;
             }
         }
@@ -56,5 +56,19 @@ public class Kasi implements Sijainti {
                 kortti.asetaSijainti(null);
             }
         }
+    }
+    
+    public int montakoKorttia() {
+        int montako = 0;
+        for (Kortti kortti : this.kortit) {
+            if (kortti != null) {
+                montako++;
+            }
+        }
+        return montako;
+    }
+    
+    public Kortti[] getKortit() {
+        return this.kortit;
     }
 }

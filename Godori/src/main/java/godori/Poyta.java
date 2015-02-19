@@ -1,5 +1,8 @@
 package godori;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Poyta implements Sijainti {
     private Ruutu[] ruudut = new Ruutu[12];
 
@@ -58,7 +61,7 @@ public class Poyta implements Sijainti {
 
         if (lisatty == false) {
             for (Ruutu ruutu : ruudut) {
-                if (ruutu.getMaa() == "tyhjä") {
+                if (ruutu.onTyhja()) {
                     ruutu.lisaaKortti(kortti);
                     break;
                 }
@@ -74,4 +77,37 @@ public class Poyta implements Sijainti {
             }
         }
     }
+    
+    public boolean onTyhja() {
+        
+        for (Ruutu ruutu : this.ruudut) {
+            if (!ruutu.onTyhja()) {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
+    public int montakoKorttia() {
+        int montako = 0;
+        for (Ruutu ruutu : this.ruudut) {
+            montako += ruutu.montakoKorttia();
+        }
+        
+        return montako;
+    }
+    
+    public List<Kortti> nostettavissaOlevatKortit() {
+        List<Kortti> nostettavissaOlevat = new ArrayList<Kortti>();
+        
+        for (Ruutu ruutu : this.ruudut) {
+            if (ruutu.montakoKorttia() == 2 || ruutu.montakoKorttia() == 4) {
+                for (Kortti kortti : ruutu.getKortit())
+                nostettavissaOlevat.add(kortti);
+            }
+        }
+        return nostettavissaOlevat;
+    }
+    trolololo... ilmaisten korttien maasta paivaa... x2 ei toimi nain...
 }

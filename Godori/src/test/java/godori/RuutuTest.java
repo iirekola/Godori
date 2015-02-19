@@ -28,7 +28,7 @@ public class RuutuTest {
     public void lisaaKorttiToimii() {
         r.lisaaKortti(k);
         
-        assertEquals("Ruudussa r1:\n  testi", r.luetteleKortit());
+        assertEquals("\n  testi", r.luetteleKortit());
     }
     
     @Test
@@ -50,7 +50,7 @@ public class RuutuTest {
         r.lisaaKortti(k);
         r.lisaaKortti(k2);
         
-        assertEquals("Ruudussa r1:\n  testi\n  testi2", r.luetteleKortit());
+        assertEquals("\n  testi\n  testi2", r.luetteleKortit());
     }
     
     @Test
@@ -71,7 +71,7 @@ public class RuutuTest {
         r.lisaaKortti(k);
         r.poistaKortti(k2);
         
-        assertEquals("Ruudussa r1:\n  testi", r.luetteleKortit());
+        assertEquals("\n  testi", r.luetteleKortit());
     }
     
     @Test
@@ -88,7 +88,7 @@ public class RuutuTest {
         r.lisaaKortti(k2);
         r.poistaKortti(k2);
         
-        assertEquals("Ruudussa r1:\n  testi", r.luetteleKortit());
+        assertEquals("\n  testi", r.luetteleKortit());
     }
     
     @Test

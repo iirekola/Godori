@@ -2,6 +2,7 @@
 package godori;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class Korttipakka implements Sijainti{
     private ArrayList<Kortti> kortit;
@@ -32,8 +33,8 @@ public class Korttipakka implements Sijainti{
         return palautus;
     }
     
-    public void jaaKortit() {
-        // jakaa kortit
+    public void sekoitaKortit() {
+        Collections.shuffle(kortit);
     }
 
     @Override
@@ -44,6 +45,10 @@ public class Korttipakka implements Sijainti{
     @Override
     public void poistaKortti(Kortti kortti) {
         // nothing happens
+    }
+    
+    public ArrayList<Kortti> getKortit() {
+        return this.kortit;
     }
     
 }

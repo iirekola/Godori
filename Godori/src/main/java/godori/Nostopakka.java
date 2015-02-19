@@ -15,6 +15,10 @@ public class Nostopakka implements Sijainti {
         return "Nostopakka";
     }
     
+    public Kortti nostaKortti() {
+        return this.nostettavissaOlevat.get(0);
+    }
+    
     public void lisaaKortti(Kortti kortti) {
         this.nostettavissaOlevat.add(kortti);
         kortti.asetaSijainti(this);
@@ -40,5 +44,9 @@ public class Nostopakka implements Sijainti {
             this.nostettavissaOlevat.remove(kortti);
             kortti.asetaSijainti(null);
         }
+    }
+    
+    public boolean onTyhja() {
+        return this.nostettavissaOlevat.isEmpty();
     }
 }   
