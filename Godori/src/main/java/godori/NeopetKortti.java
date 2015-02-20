@@ -7,4 +7,9 @@ public class NeopetKortti extends Kortti {
         super(nimi, maa);
         this.onHW = onHW;
     }
+    
+    @Override
+    public boolean onErityinen() {
+        return onHW;
+    }
 }

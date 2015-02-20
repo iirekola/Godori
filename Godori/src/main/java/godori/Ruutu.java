@@ -8,12 +8,14 @@ public class Ruutu implements Sijainti {
     private List<Kortti> kortit;
     private String nimi;
     private String maa;
+    private boolean pariAloituskadessa;
     
     
     public Ruutu(String nimi) {
         this.nimi = nimi;
         this.kortit = new ArrayList<Kortti>();
         this.maa = "tyhjä";
+        this.pariAloituskadessa = false;
     }
 
     public String toString() {
@@ -22,6 +24,14 @@ public class Ruutu implements Sijainti {
     
     public int montakoKorttia() {
         return this.kortit.size();
+    }
+    
+    public void pariAloituskadessaTrue() {
+        this.pariAloituskadessa = true;
+    }
+    
+    public boolean onAloituskadenPari() {
+        return this.pariAloituskadessa;
     }
     
     public String getMaa() {
@@ -66,6 +76,7 @@ public class Ruutu implements Sijainti {
         
         if (this.kortit.isEmpty()) {
             this.maa = "tyhjä";
+            this.pariAloituskadessa = false;
         }
     }
     

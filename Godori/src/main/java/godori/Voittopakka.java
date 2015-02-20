@@ -118,5 +118,48 @@ public class Voittopakka implements Sijainti {
         }
         return false;
     }
+    
+    public int getNeopetPisteet() {
+        
+        if (this.neopetKortit.size() == 5) {
+            return 15;
+        } else if (this.neopetKortit.size() == 4) {
+            return 4;
+        } else if (this.neopetKortit.size() == 3 && SisaltaaHauntedWoods() == false) {
+            return 3;
+        } else if (this.neopetKortit.size() == 3 && SisaltaaHauntedWoods()) {
+            return 2;
+        } else {
+            return 0;
+        }
+        
+    }
+    
+    public boolean SisaltaaHauntedWoods() {
+        for (Kortti kortti : this.neopetKortit) {
+            if (kortti.onErityinen()) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public int getPetpetPisteet() {
+        int pisteet = 0;
+        
+        return pisteet;
+    }
+    
+    public int getACPisteet() {
+        int pisteet = 0;
+        
+        return pisteet;
+    }
+    
+    public int getMaisemaPisteet() {
+        int pisteet = 0;
+        
+        return pisteet;
+    }
 }   
 

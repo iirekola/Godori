@@ -102,12 +102,24 @@ public class Poyta implements Sijainti {
         List<Kortti> nostettavissaOlevat = new ArrayList<Kortti>();
         
         for (Ruutu ruutu : this.ruudut) {
-            if (ruutu.montakoKorttia() == 2 || ruutu.montakoKorttia() == 4) {
-                for (Kortti kortti : ruutu.getKortit())
-                nostettavissaOlevat.add(kortti);
+            if (ruutu.montakoKorttia() == 4) {
+                for (Kortti kortti : ruutu.getKortit()) {
+                    nostettavissaOlevat.add(kortti);
+                }
+            } else if (!ruutu.onAloituskadenPari() && ruutu.montakoKorttia() == 2) {
+                for (Kortti kortti : ruutu.getKortit()) {
+                    nostettavissaOlevat.add(kortti);
+                }
             }
         }
         return nostettavissaOlevat;
     }
-    trolololo... ilmaisten korttien maasta paivaa... x2 ei toimi nain...
+    
+    public void merkkaaAloituskadenParit() {
+        for (Ruutu ruutu : this.ruudut) {
+            if (ruutu.montakoKorttia() == 2) {
+                ruutu.pariAloituskadessaTrue();
+            }
+        }
+    }
 }

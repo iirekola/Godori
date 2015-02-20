@@ -23,6 +23,8 @@ public class Pelilogiikka {
 
         pelaa();
 
+        paataPeli();
+
     }
 
     public void aloitaPeli() {
@@ -32,9 +34,9 @@ public class Pelilogiikka {
         Korttipakka taysiPakka = luoKorttipakka();
 
         jaaKortit(taysiPakka);
-   
+
         System.out.println(this.tulostaPoyta());
-        
+
     }
 
     public void pelaa() {
@@ -45,13 +47,15 @@ public class Pelilogiikka {
         }
     }
 
-    public void pelaaVuoro(Pelaaja pelaaja) {
-        aloitaVuoro(pelaaja);
-        pelaaKorttiKadesta(pelaaja);
-        kaannaKorttiNostopakasta();
-        keraaVoitot(pelaaja);
+    public void paataPeli() {
+        for (Pelaaja pelaaja : this.pelaajat) {
+            laskePisteet(pelaaja);
+        }
     }
 
+//    //                 //     //
+//    ALOITA PELI - METODIT     //
+//    //                 //     //
     public Korttipakka luoKorttipakka() {
         Korttienluoja kl = new Korttienluoja();
 
@@ -86,51 +90,90 @@ public class Pelilogiikka {
             }
             i++;
         }
+        this.poyta.merkkaaAloituskadenParit();
     }
-    
+
+//    //            //      //
+//    PELAA - METODIT       //
+//    //            //      //
+    public void pelaaVuoro(Pelaaja pelaaja) {
+        try {
+            aloitaVuoro(pelaaja);
+            pelaaKorttiKadesta(pelaaja);
+            Thread.sleep(2000);
+            kaannaKorttiNostopakasta();
+            Thread.sleep(4000);
+            keraaVoitot(pelaaja);
+        } catch (Exception e) {
+            aloitaVuoro(pelaaja);
+            pelaaKorttiKadesta(pelaaja);
+            kaannaKorttiNostopakasta();
+            keraaVoitot(pelaaja);
+        }
+    }
+
     public void aloitaVuoro(Pelaaja pelaaja) {
-        System.out.print("Pelaajan " + pelaaja.toString() 
-                + " vuoro.\n  Näytä kortit?  Y/N  ");
+        System.out.println("Pelaajan " + pelaaja.toString()
+                + " vuoro.");
 
         while (true) {
+            System.out.print("  Näytä kortit?  Y/N  ");
             String vastaus = lukija.nextLine();
 
             if (vastaus.equals("Y") || vastaus.equals("y")) {
                 break;
             }
         }
-    }
 
-    public void pelaaKorttiKadesta(Pelaaja pelaaja) {
         System.out.println(Erotin());
         System.out.println(this.tulostaKasi(pelaaja));
         System.out.println(this.tulostaPoyta());
-        
+    }
+
+    public void pelaaKorttiKadesta(Pelaaja pelaaja) {
         System.out.print("\nValitse kädestäsi pelattava kortti.\n  Anna kortin numero: ");
-        
-        int kortinNumero = Integer.parseInt(lukija.nextLine()) - 1;
-        Kortti valittu = pelaaja.getKasi().getKortit()[kortinNumero];
-        
+
+        int kortinNumero = Integer.parseInt(lukija.nextLine());
+
+        Kortti valittu = pelaaja.getKasi().getJarjestysnumeroaVastaavaKortti(kortinNumero);
+        System.out.println("\nPelataan kortti pöytään...\n  " + valittu);
+
         siirraKortti(valittu, valittu.getSijainti(), this.poyta);
+
+        System.out.println(Erotin() + this.tulostaPoyta());
     }
 
     public void kaannaKorttiNostopakasta() {
-        System.out.println(Erotin() + this.tulostaPoyta());
         System.out.println("Käännetään kortti nostopakasta...");
         // odotusominaisuus?
         Kortti kortti = this.nostopakka.nostaKortti();
         siirraKortti(kortti, this.nostopakka, this.poyta);
+        System.out.println("  " + kortti);
+
+        System.out.println(Erotin() + this.tulostaPoyta());
     }
 
     public void keraaVoitot(Pelaaja pelaaja) {
-        System.out.println(Erotin() + this.tulostaPoyta());
         List<Kortti> voitot = this.poyta.nostettavissaOlevatKortit();
+        String kortit = "";
         for (Kortti kortti : voitot) {
+            kortit += "\n  " + kortti;
             siirraKortti(kortti, kortti.getSijainti(), pelaaja.getVoittopakka());
         }
+        System.out.println("Kerätään voitot..." + kortit);
         System.out.println(this.tulostaVoittopakat());
     }
-    
+
+//    //                //     //
+//    PAATA PELI - METODIT     //
+//    //                //     //
+    public void laskePisteet(Pelaaja pelaaja) {
+
+    }
+
+//    //              //      //
+//    YLEISET - METODIT       //
+//    //              //      //    
     public void siirraKortti(Kortti kortti, Sijainti s1, Sijainti s2) {
         s1.poistaKortti(kortti);
         s2.lisaaKortti(kortti);
@@ -140,14 +183,14 @@ public class Pelilogiikka {
         String palautus = "";
         palautus += pelaaja + "\n";
         palautus += pelaaja.tulostaKasi() + Erotin();
-        
+
         return palautus;
     }
 
     public String tulostaPoyta() {
         String palautus = "";
         palautus += this.poyta.luetteleKortit() + Erotin();
-        
+
         return palautus;
     }
 
@@ -158,7 +201,7 @@ public class Pelilogiikka {
                     + pelaaja.tulostaVoittopakka();
         }
         palautus += Erotin();
-        
+
         return palautus;
     }
 

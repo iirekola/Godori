@@ -31,6 +31,19 @@ public class Kasi implements Sijainti {
 
         return palautus;
     }
+    
+    public Kortti getJarjestysnumeroaVastaavaKortti(int numero) {
+        int moneskoKortti = 0;
+        for (Kortti kortti : kortit) {
+            if (kortti != null) {
+                moneskoKortti++;
+                if (moneskoKortti == numero) {
+                    return kortti;
+                }
+            }
+        }
+        return null;
+    }
 
     @Override
     public void lisaaKortti(Kortti kortti) {

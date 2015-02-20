@@ -42,4 +42,8 @@ public class Pelaaja {
     public int montakoKorttiaKadessa() {
        return this.kasi.montakoKorttia();
     }
+    
+    public void laskePisteet() {
+
+    }
 }

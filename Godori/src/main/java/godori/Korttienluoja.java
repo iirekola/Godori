@@ -23,29 +23,29 @@ public class Korttienluoja {
     }
     
     public void luoPetpetit() {
-        korttipakka.add(new PetpetKortti("Faerieland, Petpet", "Faerieland", true, false));
-        korttipakka.add(new PetpetKortti("Space Station, Petpet", "Space Station", true, false));
+        korttipakka.add(new PetpetKortti("Faerieland, Lentävä Petpet", "Faerieland", true, false));
+        korttipakka.add(new PetpetKortti("Space Station, Lentävä Petpet", "Space Station", true, false));
         korttipakka.add(new PetpetKortti("Haunted Woods, Petpet", "Haunted Woods", false, false));
-        korttipakka.add(new PetpetKortti("Altador, Petpet", "Altador", true, false));
+        korttipakka.add(new PetpetKortti("Altador, Lentävä Petpet", "Altador", true, false));
         korttipakka.add(new PetpetKortti("Tyrannia, Petpet", "Tyrannia", false, false));
         korttipakka.add(new PetpetKortti("Krawk Island, Petpet", "Krawk Island", false, false));
         korttipakka.add(new PetpetKortti("Roo Island, Petpet", "Roo Island", false, false));
         korttipakka.add(new PetpetKortti("Meridell, Petpet", "Meridell", false, false));
-        korttipakka.add(new PetpetKortti("Mystery Island, Petpet", "Mystery Island", false, true));
+        korttipakka.add(new PetpetKortti("Mystery Island, Petpet/Maisema", "Mystery Island", false, true));
     }
     
     public void luoAltadorCupit() {
-        korttipakka.add(new AltadorCupKortti("Faerieland, Altador Cup", "Faerieland", "vaakuna"));
-        korttipakka.add(new AltadorCupKortti("Tyrannia, Altador Cup", "Tyrannia", "vaakuna"));
-        korttipakka.add(new AltadorCupKortti("Roo Island, Altador Cup", "Roo Island", "vaakuna"));
+        korttipakka.add(new AltadorCupKortti("Faerieland, Vaakuna", "Faerieland", "vaakuna"));
+        korttipakka.add(new AltadorCupKortti("Tyrannia, Vaakuna", "Tyrannia", "vaakuna"));
+        korttipakka.add(new AltadorCupKortti("Roo Island, AVaakuna", "Roo Island", "vaakuna"));
         
-        korttipakka.add(new AltadorCupKortti("Altador, Altador Cup", "Altador", "viiri"));
-        korttipakka.add(new AltadorCupKortti("Shenkuu, Altador Cup", "Shenkuu", "viiri"));
-        korttipakka.add(new AltadorCupKortti("Terror Mountain, Altador Cup", "Terror Mountain", "viiri"));
+        korttipakka.add(new AltadorCupKortti("Altador, Viiri", "Altador", "viiri"));
+        korttipakka.add(new AltadorCupKortti("Shenkuu, Viiri", "Shenkuu", "viiri"));
+        korttipakka.add(new AltadorCupKortti("Terror Mountain, Viiri", "Terror Mountain", "viiri"));
         
-        korttipakka.add(new AltadorCupKortti("Krawk Island, Altador Cup", "Krawk Island", "nauha"));
-        korttipakka.add(new AltadorCupKortti("Meridell, Altador Cup", "Meridell", "nauha"));
-        korttipakka.add(new AltadorCupKortti("Mystery Island, Altador Cup", "Mystery Island", "nauha"));
+        korttipakka.add(new AltadorCupKortti("Krawk Island, Nauha", "Krawk Island", "nauha"));
+        korttipakka.add(new AltadorCupKortti("Meridell, Nauha", "Meridell", "nauha"));
+        korttipakka.add(new AltadorCupKortti("Mystery Island, Nauha", "Mystery Island", "nauha"));
     
         
         korttipakka.add(new AltadorCupKortti("Haunted Woods, Altador Cup", "Haunted Woods", null));
@@ -58,7 +58,7 @@ public class Korttienluoja {
         korttipakka.add(new MaisemaKortti("Space Station, maisema1", "Space Station", false));
         korttipakka.add(new MaisemaKortti("Space Station, maisema2", "Space Station", false));
         
-        korttipakka.add(new MaisemaKortti("Haunted Woods, maisema", "Haunted Woods", true));
+        korttipakka.add(new MaisemaKortti("Haunted Woods, 2X maisema", "Haunted Woods", true));
         
         korttipakka.add(new MaisemaKortti("Altador, maisema1", "Altador", false));
         korttipakka.add(new MaisemaKortti("Altador, maisema2", "Altador", false));
@@ -80,7 +80,7 @@ public class Korttienluoja {
         
         korttipakka.add(new MaisemaKortti("Lost Desert, maisema1", "Lost Desert", false));
         korttipakka.add(new MaisemaKortti("Lost Desert, maisema2", "Lost Desert", false));
-        korttipakka.add(new MaisemaKortti("Lost Desert, maisema3", "Lost Desert", false));
+        korttipakka.add(new MaisemaKortti("Lost Desert, 2X maisema3", "Lost Desert", true));
         
         korttipakka.add(new MaisemaKortti("Meridell, maisema1", "Meridell", false));
         korttipakka.add(new MaisemaKortti("Meridell, maisema2", "Meridell", false));

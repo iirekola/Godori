@@ -25,4 +25,8 @@ public class Kortti {
     public Sijainti getSijainti() {
         return this.sijainti;
     }
+    
+    public boolean onErityinen() {
+        return false;
+    }
 }
