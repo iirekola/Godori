@@ -35,14 +35,14 @@ Petpet:
 -  jokaisesta 5 korttia ylittävästä kortista = 1p
 -  kaikki 3 lentävää = 5 p
 
-Altador Cup
+Altador Cup:
 -  5 korttia = 1 p
 -  jokaisesta 5 korttia ylittävästä kortista = 1p
 -  3 viiriä = 3p
 -  3 vaakunaa = 3p
 -  3 nauhaa = 3p
 
-Maisema
+Maisema:
 -  10 korttia = 1 p
 -  jokaisesta 10 korttia ylittävästä kortista = 1p
   
@@ -50,13 +50,16 @@ Maisema
 
 - 'Haunted Woods, 2X maisema3'
 - 'Lost Desert, 2X maisema'
-   = ovat kahden kortin arvoisia
+  
+= ovat kahden kortin arvoisia
 
 - 'Mystery Island, Petpet/Maisema'
-   = voidaan käyttää pisteytyksessä petpet- tai maisemakorttina
+
+= voidaan käyttää pisteytyksessä petpet- tai maisemakorttina
   
 - 'Haunted Woods, Altador Cup'
-   = ei ole viiri, vaakuna eikä nauha
+
+  = ei ole viiri, vaakuna eikä nauha
 
 ## Korttityyppien määrät
 
@@ -79,50 +82,50 @@ Maisema
 
 - Haunted Woods, Neopet
 - Haunted Woods, Petpet
-Haunted Woods, Altador Cup
-Haunted Woods, 2X maisema
+- Haunted Woods, Altador Cup
+- Haunted Woods, 2X maisema
 
-Krawk Island, Petpet
-Krawk Island, Nauha
-Krawk Island, maisema1
-Krawk Island, maisema2
+- Krawk Island, Petpet
+- Krawk Island, Nauha
+- Krawk Island, maisema1
+- Krawk Island, maisema2
 
-Lost Desert, Neopet
-Lost Desert, maisema1
-Lost Desert, maisema2
-Lost Desert, 2X maisema3
+- Lost Desert, Neopet
+- Lost Desert, maisema1
+- Lost Desert, maisema2
+- Lost Desert, 2X maisema3
 
-Meridell, Petpet
-Meridell, Nauha
-Meridell, maisema1
-Meridell, maisema2
+- Meridell, Petpet
+- Meridell, Nauha
+- Meridell, maisema1
+- Meridell, maisema2
 
-Mystery Island, Petpet/Maisema
-Mystery Island, Nauha
-Mystery Island, maisema1
-Mystery Island, maisema2
+- Mystery Island, Petpet/Maisema
+- Mystery Island, Nauha
+- Mystery Island, maisema1
+- Mystery Island, maisema2
 
-Roo Island, Petpet
-Roo Island, Vaakuna
-Roo Island, maisema1
-Roo Island, maisema2
+- Roo Island, Petpet
+- Roo Island, Vaakuna
+- Roo Island, maisema1
+- Roo Island, maisema2
 
-Shenkuu, Neopet
-Shenkuu, Viiri
-Shenkuu, maisema1
-Shenkuu, maisema2
+- Shenkuu, Neopet
+- Shenkuu, Viiri
+- Shenkuu, maisema1
+- Shenkuu, maisema2
 
-Space Station, Neopet
-Space Station, Lentävä Petpet
-Space Station, maisema1
-Space Station, maisema2
+- Space Station, Neopet
+- Space Station, Lentävä Petpet
+- Space Station, maisema1
+- Space Station, maisema2
 
-Terror Mountain, Neopet
-Terror Mountain, Viiri
-Terror Mountain, maisema1
-Terror Mountain, maisema2
+- Terror Mountain, Neopet
+- Terror Mountain, Viiri
+- Terror Mountain, maisema1
+- Terror Mountain, maisema2
 
-Tyrannia, Petpet
-Tyrannia, Vaakuna
-Tyrannia, maisema1
-Tyrannia, maisema2
+- Tyrannia, Petpet
+- Tyrannia, Vaakuna
+- Tyrannia, maisema1
+- Tyrannia, maisema2
