@@ -51,11 +51,11 @@ Maisema:
 - 'Haunted Woods, 2X maisema3'
 - 'Lost Desert, 2X maisema'
   
-= ovat kahden kortin arvoisia
+  = ovat kahden kortin arvoisia
 
 - 'Mystery Island, Petpet/Maisema'
 
-= voidaan käyttää pisteytyksessä petpet- tai maisemakorttina
+  = voidaan käyttää pisteytyksessä petpet- tai maisemakorttina
   
 - 'Haunted Woods, Altador Cup'
 
@@ -75,15 +75,18 @@ Maisema:
 - Altador, maisema1
 - Altador, maisema2
 
+
 - Faerieland, Lentävä Petpet
 - Faerieland, Vaakuna
 - Faerieland, maisema1
 - Faerieland, maisema2
 
+
 - Haunted Woods, Neopet
 - Haunted Woods, Petpet
 - Haunted Woods, Altador Cup
 - Haunted Woods, 2X maisema
+
 
 - Krawk Island, Petpet
 - Krawk Island, Nauha
