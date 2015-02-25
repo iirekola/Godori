@@ -2,7 +2,7 @@ Käyttöohjeet tekstikäyttöliittymään
 
 Käynnistä peli ajamalla pääohjelma. Seuraa ohjeita pelataksesi.
 
-## Pelin säännöt
+# Pelin säännöt
 Godoria pelataan 48 kortin pakalla. Jokaisella kortilla on maa ja tyyppi. Eri maita on 12 
 (mm. Altador, Shenkuu, Mystery Island, ...) ja tyyppejä neljä (Neopet, Petpet, Altador Cup ja Maisema). 
 Jokaista maata edustaa neljä korttia. Kortin nimen ensimmäinen osa kertoo sen maan ja toinen osa sen tyypin.
@@ -20,7 +20,7 @@ Peli päättyy kun toisella pelaajalla on kierroksen päätyessä vähintään 5
 
 Vaiheessa 3 lasketaan voitoiksi pöydässä sijaitsevat samaa maata olevat kortit, joiden lukumäärä on vuoron aikana kasvanut joko kahteen tai neljään.
 
-# Pisteytys
+## Pisteytys
 
 pisteytyksessä on väliä vain kortin *tyypillä*. Pisteet jakautuvat seuraavasti.
 
@@ -43,7 +43,7 @@ Maisema
   10 korttia = 1 p
   jokaisesta 10 korttia ylittävästä kortista = 1p
   
-# Erityisiä kortteja
+## Erityisiä kortteja
 
 'Haunted Woods, 2X maisema3'
 'Lost Desert, 2X maisema'
@@ -55,14 +55,14 @@ Maisema
 'Haunted Woods, Altador Cup'
     = ei ole viiri, vaakuna eikä nauha
 
-# Korttityyppien määrät
+## Korttityyppien määrät
 
 Neopet: 5
 Petpet: 9
 Altador Cup: 10
 Maisema: 24
 
-# Luettelo korteista maittain
+## Luettelo korteista maittain
 
 Altador, Lentävä Petpet
 Altador, Viiri
