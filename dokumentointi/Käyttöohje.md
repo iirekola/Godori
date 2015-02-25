@@ -25,10 +25,10 @@ Vaiheessa 3 lasketaan voitoiksi pöydässä sijaitsevat samaa maata olevat korti
 pisteytyksessä on väliä vain kortin *tyypillä*. Pisteet jakautuvat seuraavasti.
 
 Neopet:
--  5 korttia = 15 p
--  4 korttia = 4 p
--  3 korttia = 3 p  jos mukana ei ole 'Haunted Woods, Neopet' -korttia
--  3 korttia = 2 p  jos mukana on 'Haunted Woods, Neopet' -kortti
+⋅⋅⋅5 korttia = 15 p
+⋅⋅⋅4 korttia = 4 p
+⋅⋅⋅3 korttia = 3 p  jos mukana ei ole 'Haunted Woods, Neopet' -korttia
+⋅⋅⋅3 korttia = 2 p  jos mukana on 'Haunted Woods, Neopet' -kortti
 Petpet:
 -  5 korttia = 1 p
 -  jokaisesta 5 korttia ylittävästä kortista = 1p
