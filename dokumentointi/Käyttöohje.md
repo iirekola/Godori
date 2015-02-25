@@ -70,61 +70,61 @@ Maisema:
 
 ## Luettelo korteista maittain
 
-- Altador, Lentävä Petpet
-- Altador, Viiri
+> Altador, Lentävä Petpet
+> Altador, Viiri
 - Altador, maisema1
 - Altador, maisema2
--------
+
 - Faerieland, Lentävä Petpet
 - Faerieland, Vaakuna
 - Faerieland, maisema1
 - Faerieland, maisema2
--------
+
 - Haunted Woods, Neopet
 - Haunted Woods, Petpet
 - Haunted Woods, Altador Cup
 - Haunted Woods, 2X maisema
--------
+
 - Krawk Island, Petpet
 - Krawk Island, Nauha
 - Krawk Island, maisema1
 - Krawk Island, maisema2
--------
+
 - Lost Desert, Neopet
 - Lost Desert, maisema1
 - Lost Desert, maisema2
 - Lost Desert, 2X maisema3
--------
+
 - Meridell, Petpet
 - Meridell, Nauha
 - Meridell, maisema1
 - Meridell, maisema2
--------
+
 - Mystery Island, Petpet/Maisema
 - Mystery Island, Nauha
 - Mystery Island, maisema1
 - Mystery Island, maisema2
--------
+
 - Roo Island, Petpet
 - Roo Island, Vaakuna
 - Roo Island, maisema1
 - Roo Island, maisema2
--------
+
 - Shenkuu, Neopet
 - Shenkuu, Viiri
 - Shenkuu, maisema1
 - Shenkuu, maisema2
--------
+
 - Space Station, Neopet
 - Space Station, Lentävä Petpet
 - Space Station, maisema1
 - Space Station, maisema2
--------
+
 - Terror Mountain, Neopet
 - Terror Mountain, Viiri
 - Terror Mountain, maisema1
 - Terror Mountain, maisema2
--------
+
 - Tyrannia, Petpet
 - Tyrannia, Vaakuna
 - Tyrannia, maisema1
