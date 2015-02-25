@@ -25,35 +25,38 @@ Vaiheessa 3 lasketaan voitoiksi pöydässä sijaitsevat samaa maata olevat korti
 pisteytyksessä on väliä vain kortin *tyypillä*. Pisteet jakautuvat seuraavasti.
 
 Neopet:
-⋅⋅⋅ 5 korttia = 15 p
-⋅⋅⋅ 4 korttia = 4 p
-⋅⋅⋅ 3 korttia = 3 p  jos mukana ei ole 'Haunted Woods, Neopet' -korttia
-⋅⋅⋅ 3 korttia = 2 p  jos mukana on 'Haunted Woods, Neopet' -kortti
+- 5 korttia = 15 p
+- 4 korttia = 4 p
+- 3 korttia = 3 p  jos mukana ei ole 'Haunted Woods, Neopet' -korttia
+- 3 korttia = 2 p  jos mukana on 'Haunted Woods, Neopet' -kortti
+
 Petpet:
 -  5 korttia = 1 p
 -  jokaisesta 5 korttia ylittävästä kortista = 1p
 -  kaikki 3 lentävää = 5 p
+
 Altador Cup
 -  5 korttia = 1 p
 -  jokaisesta 5 korttia ylittävästä kortista = 1p
 -  3 viiriä = 3p
 -  3 vaakunaa = 3p
 -  3 nauhaa = 3p
+
 Maisema
 -  10 korttia = 1 p
 -  jokaisesta 10 korttia ylittävästä kortista = 1p
   
 ## Erityisiä kortteja
 
-'Haunted Woods, 2X maisema3'
-'Lost Desert, 2X maisema'
--    = ovat kahden kortin arvoisia
+- 'Haunted Woods, 2X maisema3'
+- 'Lost Desert, 2X maisema'
+   = ovat kahden kortin arvoisia
 
-'Mystery Island, Petpet/Maisema'
--    = voidaan käyttää pisteytyksessä petpet- tai maisemakorttina
+- 'Mystery Island, Petpet/Maisema'
+   = voidaan käyttää pisteytyksessä petpet- tai maisemakorttina
   
-'Haunted Woods, Altador Cup'
--    = ei ole viiri, vaakuna eikä nauha
+- 'Haunted Woods, Altador Cup'
+   = ei ole viiri, vaakuna eikä nauha
 
 ## Korttityyppien määrät
 
