@@ -50,5 +50,10 @@ public class Korttipakka implements Sijainti{
     public ArrayList<Kortti> getKortit() {
         return this.kortit;
     }
+
+    @Override
+    public void tyhjenna() {
+        // nothing happens
+    }
     
 }

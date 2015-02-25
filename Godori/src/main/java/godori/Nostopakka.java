@@ -49,4 +49,8 @@ public class Nostopakka implements Sijainti {
     public boolean onTyhja() {
         return this.nostettavissaOlevat.isEmpty();
     }
+    
+    public void tyhjenna() {
+        this.nostettavissaOlevat.clear();
+    }
 }   

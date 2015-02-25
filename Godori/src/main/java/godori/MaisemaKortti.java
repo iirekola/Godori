@@ -7,4 +7,9 @@ public class MaisemaKortti extends Kortti {
         super(nimi, maa);
         this.kaksiKorttia = kaksiKorttia;
     }
+    
+    @Override
+    public boolean onErityinen() {
+        return this.kaksiKorttia;
+    }
 }

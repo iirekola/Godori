@@ -1,6 +1,7 @@
 package godori;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
@@ -10,6 +11,7 @@ public class Pelilogiikka {
     private Poyta poyta;
     private Nostopakka nostopakka;
     private List<Pelaaja> pelaajat;
+    private Korttipakka taysiPakka;
 
     public Pelilogiikka() {
         this.poyta = new Poyta();
@@ -17,21 +19,35 @@ public class Pelilogiikka {
     }
 
     public void kaynnista() {
-        System.out.println("Godori\n" + Erotin());
+        System.out.println("Godori\n" + erotin());
 
         aloitaPeli();
 
         pelaa();
 
-        paataPeli();
+        paataKierros();
 
+    }
+
+    public void uusiKierros() {
+        System.out.println("Godori\n" + erotin());
+        
+        tyhjennaVoittopakat();
+
+        valitseAloittavaPelaaja();
+
+        aloitaKierros();
+
+        pelaa();
+
+        paataKierros();
     }
 
     public void aloitaPeli() {
         luoPelaajat(this.lukija);
-        System.out.println(Erotin());
+        System.out.println(erotin());
 
-        Korttipakka taysiPakka = luoKorttipakka();
+        taysiPakka = luoKorttipakka();
 
         jaaKortit(taysiPakka);
 
@@ -47,9 +63,60 @@ public class Pelilogiikka {
         }
     }
 
-    public void paataPeli() {
+    public void paataKierros() {
         for (Pelaaja pelaaja : this.pelaajat) {
-            laskePisteet(pelaaja);
+            pelaaja.laskePisteet();
+        }
+
+        tulostaKierroksenLopputulos();
+
+        if (lopetetaankoPeli() == false) {
+            aloitetaankoKierros();
+            uusiKierros();
+        } else {
+            tulostaVoittaja();
+            lopetaPeli();
+        }
+    }
+
+    public void aloitaKierros() {
+        tyhjennaVoittopakat();
+        
+        System.out.println("Uusi kierros alkaa...\n" + erotin());
+
+        jaaKortit(taysiPakka);
+
+        System.out.println(this.tulostaPoyta());
+    }
+    
+    public void lopetaPeli() {
+        System.out.print("Uusi peli? y/n ");
+        
+        while (true) {
+            String vastaus = lukija.nextLine();
+            
+            if (vastaus.equals("N") || vastaus.equals("n")) {
+                break;
+            } else if (vastaus.equals("Y") || vastaus.equals("y")) {
+                uusiPeli();
+            }
+        }
+    }
+    
+    public void uusiPeli() {
+        this.nostopakka.tyhjenna();
+        for (Pelaaja pelaaja : pelaajat) {
+            pelaaja.tyhjennaPakat();
+        }
+    }
+
+    public void valitseAloittavaPelaaja() {
+        Collections.reverse(pelaajat);
+    }
+    
+    public void tyhjennaVoittopakat() {
+        for (Pelaaja pelaaja : pelaajat) {
+            pelaaja.tyhjennaVoittopakka();
         }
     }
 
@@ -125,22 +192,38 @@ public class Pelilogiikka {
             }
         }
 
-        System.out.println(Erotin());
+        System.out.println(erotin());
         System.out.println(this.tulostaKasi(pelaaja));
         System.out.println(this.tulostaPoyta());
     }
 
     public void pelaaKorttiKadesta(Pelaaja pelaaja) {
-        System.out.print("\nValitse kädestäsi pelattava kortti.\n  Anna kortin numero: ");
 
-        int kortinNumero = Integer.parseInt(lukija.nextLine());
+        System.out.print("\nValitse kädestäsi pelattava kortti.");
+        Kortti valittu = null;
 
-        Kortti valittu = pelaaja.getKasi().getJarjestysnumeroaVastaavaKortti(kortinNumero);
+        while (true) {
+            System.out.print("\n  Anna kortin numero: ");
+            int kortinNumero = 0;
+            try {
+                kortinNumero = Integer.parseInt(lukija.nextLine());
+            }
+            catch (Exception e) {
+                continue;
+            }
+            valittu = pelaaja.getKasi().getJarjestysnumeroaVastaavaKortti(kortinNumero);
+
+            if (valittu != null) {
+                break;
+            }
+            
+            System.out.print("Valitsemaasi korttia ei löytynyt. Yritä uudestaan. ");
+        }
         System.out.println("\nPelataan kortti pöytään...\n  " + valittu);
 
         siirraKortti(valittu, valittu.getSijainti(), this.poyta);
 
-        System.out.println(Erotin() + this.tulostaPoyta());
+        System.out.println(erotin() + this.tulostaPoyta());
     }
 
     public void kaannaKorttiNostopakasta() {
@@ -150,7 +233,7 @@ public class Pelilogiikka {
         siirraKortti(kortti, this.nostopakka, this.poyta);
         System.out.println("  " + kortti);
 
-        System.out.println(Erotin() + this.tulostaPoyta());
+        System.out.println(erotin() + this.tulostaPoyta());
     }
 
     public void keraaVoitot(Pelaaja pelaaja) {
@@ -167,8 +250,50 @@ public class Pelilogiikka {
 //    //                //     //
 //    PAATA PELI - METODIT     //
 //    //                //     //
-    public void laskePisteet(Pelaaja pelaaja) {
+    public boolean lopetetaankoPeli() {
+        for (Pelaaja pelaaja : this.pelaajat) {
+            if (pelaaja.getPisteet() >= 50) {
+                return true;
+            }
+        }
+        return false;
+    }
 
+    public void tulostaKierroksenLopputulos() {
+        System.out.println("Pisteet kierroksen jälkeen:");
+
+        for (Pelaaja pelaaja : pelaajat) {
+            System.out.println("\n  " + pelaaja + ": " + pelaaja.getPisteet());
+        }
+
+        System.out.println(erotin());
+    }
+
+    public void aloitetaankoKierros() {
+        System.out.print("Aloita seuraava kierros? y/n ");
+
+        while (true) {
+            String vastaus = lukija.nextLine();
+            if (vastaus.equals("Y") || vastaus.equals("y")) {
+                break;
+            }
+            System.out.println("valitse 'y' aloittaksesi seuraavan kierroksen. ");
+        }
+        System.out.println(erotin());
+    }
+
+    public void tulostaVoittaja() {
+        Pelaaja voittaja = null;
+        int pisteet = 50;
+
+        for (Pelaaja pelaaja : pelaajat) {
+            if (pelaaja.getPisteet() > pisteet) {
+                voittaja = pelaaja;
+                pisteet = pelaaja.getPisteet();
+            }
+        }
+
+        System.out.println("Voittaja on: " + voittaja.toString() + "\n  pisteet: " + voittaja.getPisteet() + "\n  Onneksi olkoon!");
     }
 
 //    //              //      //
@@ -182,14 +307,14 @@ public class Pelilogiikka {
     public String tulostaKasi(Pelaaja pelaaja) {
         String palautus = "";
         palautus += pelaaja + "\n";
-        palautus += pelaaja.tulostaKasi() + Erotin();
+        palautus += pelaaja.tulostaKasi() + erotin();
 
         return palautus;
     }
 
     public String tulostaPoyta() {
         String palautus = "";
-        palautus += this.poyta.luetteleKortit() + Erotin();
+        palautus += this.poyta.luetteleKortit() + erotin();
 
         return palautus;
     }
@@ -200,12 +325,12 @@ public class Pelilogiikka {
             palautus += "\n\n" + pelaaja.toString() + ":\n"
                     + pelaaja.tulostaVoittopakka();
         }
-        palautus += Erotin();
+        palautus += erotin();
 
         return palautus;
     }
 
-    public String Erotin() {
+    public String erotin() {
         return "\n_______________________________________________\n\n";
     }
 

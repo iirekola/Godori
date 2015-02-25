@@ -29,4 +29,8 @@ public class Kortti {
     public boolean onErityinen() {
         return false;
     }
+    
+    public String onErityinen2() {
+        return null;
+    }
 }

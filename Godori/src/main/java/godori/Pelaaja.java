@@ -4,11 +4,13 @@ public class Pelaaja {
     private String nimi;
     private Kasi kasi;
     private Voittopakka voittopakka;
+    private int pisteet;
     
     public Pelaaja(String nimi) {
         this.nimi = nimi;
         this.kasi = new Kasi();
         this.voittopakka = new Voittopakka();
+        this.pisteet = 0;
     }
     
     public String toString(){
@@ -17,6 +19,10 @@ public class Pelaaja {
     
     public Kasi getKasi() {
         return this.kasi;
+    }
+    
+    public int getPisteet() {
+        return this.pisteet;
     }
     
     public String tulostaKasi() {
@@ -44,6 +50,20 @@ public class Pelaaja {
     }
     
     public void laskePisteet() {
-
+        this.pisteet += this.voittopakka.laskePisteet();
     }
+    
+    public void tyhjennaPakat() {
+        this.kasi.tyhjenna();
+        this.voittopakka.tyhjenna();
+    }
+    
+    public void nollaaPisteet() {
+        this.pisteet = 0;
+    } 
+
+    void tyhjennaVoittopakka() {
+        this.voittopakka.tyhjenna();
+    }
+    
 }

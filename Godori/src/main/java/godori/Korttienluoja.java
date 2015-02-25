@@ -37,7 +37,7 @@ public class Korttienluoja {
     public void luoAltadorCupit() {
         korttipakka.add(new AltadorCupKortti("Faerieland, Vaakuna", "Faerieland", "vaakuna"));
         korttipakka.add(new AltadorCupKortti("Tyrannia, Vaakuna", "Tyrannia", "vaakuna"));
-        korttipakka.add(new AltadorCupKortti("Roo Island, AVaakuna", "Roo Island", "vaakuna"));
+        korttipakka.add(new AltadorCupKortti("Roo Island, Vaakuna", "Roo Island", "vaakuna"));
         
         korttipakka.add(new AltadorCupKortti("Altador, Viiri", "Altador", "viiri"));
         korttipakka.add(new AltadorCupKortti("Shenkuu, Viiri", "Shenkuu", "viiri"));

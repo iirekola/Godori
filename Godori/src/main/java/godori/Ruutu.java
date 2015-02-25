@@ -93,5 +93,10 @@ public class Ruutu implements Sijainti {
         return this.kortit.isEmpty();
     }
 
+    @Override
+    public void tyhjenna() {
+        this.kortit.clear();
+    }
+
     
 }

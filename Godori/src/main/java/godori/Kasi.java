@@ -1,5 +1,8 @@
 package godori;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Kasi implements Sijainti {
 
     private Kortti[] kortit;
@@ -83,5 +86,18 @@ public class Kasi implements Sijainti {
     
     public Kortti[] getKortit() {
         return this.kortit;
+    }
+
+    @Override
+    public void tyhjenna() {
+        List<Kortti> poistettavat = new ArrayList<Kortti>();
+        for (int i = 0; i < kortit.length; i++) {
+            poistettavat.add(kortit[i]);
+        }
+
+        for (Kortti kortti : poistettavat) {
+            this.poistaKortti(kortti);
+        }
+
     }
 }

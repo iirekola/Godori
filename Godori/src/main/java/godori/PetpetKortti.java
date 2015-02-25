@@ -9,4 +9,17 @@ public class PetpetKortti extends Kortti {
         this.onLentava = onLentava;
         this.onMaisema = onMaisema;
     }
+    
+    @Override
+    public boolean onErityinen() {
+        return this.onLentava;
+    }
+    
+    @Override
+    public String onErityinen2() {
+        if (onMaisema) {
+            return "maisema";
+        }
+        return null;
+    }
 }

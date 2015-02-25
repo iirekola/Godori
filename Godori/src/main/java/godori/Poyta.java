@@ -122,4 +122,11 @@ public class Poyta implements Sijainti {
             }
         }
     }
+    
+    @Override
+    public void tyhjenna() {
+        for (int i = 0; i < ruudut.length; i++) {
+            ruudut[i].tyhjenna();
+        }
+    }
 }

@@ -7,4 +7,9 @@ public class AltadorCupKortti extends Kortti {
         super(nimi, maa);
         this.tunnus = tunnus;
     }
+    
+    @Override
+    public String onErityinen2() {
+        return this.tunnus;
+    }
 }

@@ -25,24 +25,6 @@ public class Paaohjelma {
        
        godori.kaynnista();
        
-       
-//
-//        Kasi k = new Kasi();
-//        
-//    Kortti n = new NeopetKortti("Testi1", "Testi1", false);
-//    Kortti p = new PetpetKortti("Testi2", "Testi2", true, false);
-//    Kortti a = new AltadorCupKortti("Testi3", "Testi3", "Testi");
-//    Kortti m = new MaisemaKortti("Testi4", "Testi4", false);
-//    
-//    k.lisaaKortti(n);
-//    k.lisaaKortti(p);
-//    k.lisaaKortti(a);
-//    k.lisaaKortti(m);
-//    
-//        System.out.println(k.luetteleKortit());
-        
-        
-        
     }
 
 }
