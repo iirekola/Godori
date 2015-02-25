@@ -12,7 +12,7 @@ Pöydästä saa nostettua kortteja yhdistämällä samaa *maata* olevia kortteja
 
 Peli päättyy kun toisella pelaajalla on kierroksen päätyessä vähintään 50 pistettä.
 
-# Vuoron kulku
+## Vuoron kulku
 1. Valitse kortti kädestäsi. Kortti lisätään pöytään.
 2. Nostopakasta kääntyy automaattisesti toinen kortti. Myös tämä kortti lisätään pöytään.
 3. Voittosi kerätään pöydästä voittopakkaasi.
