@@ -70,8 +70,8 @@ Maisema:
 
 ## Luettelo korteista maittain
 
-> Altador, Lentävä Petpet
-> Altador, Viiri
+- Altador, Lentävä Petpet
+- Altador, Viiri
 - Altador, maisema1
 - Altador, maisema2
 
