@@ -3,6 +3,9 @@ package godori;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka voitettujen kottien pistelaskuun
+ */
 public class Voittopakka implements Sijainti {
 
     private List<Kortti> neopetKortit;

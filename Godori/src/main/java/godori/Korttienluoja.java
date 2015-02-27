@@ -3,6 +3,9 @@ package godori;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka sisältää korttipakan korttien tiedot ja metodit kortien luomiseen
+ */
 public class Korttienluoja {
         private ArrayList<Kortti> korttipakka = new ArrayList<Kortti>();
     

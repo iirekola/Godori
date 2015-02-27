@@ -1,5 +1,8 @@
 package godori;
 
+/**
+ * Kortti-luokan alaluokka, kuvaa Maisema typpisiä kortteja
+ */
 public class MaisemaKortti extends Kortti {
     private boolean kaksiKorttia;
     

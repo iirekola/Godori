@@ -1,5 +1,8 @@
 package godori;
 
+/**
+ * Yliluokka korttityypeille
+ */
 public class Kortti {
     private String nimi;
     private String maa;

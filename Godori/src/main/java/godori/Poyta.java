@@ -3,6 +3,9 @@ package godori;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka kuvaa pöytää ja sen metodit ovat korttien käsittelyä varten
+ */
 public class Poyta implements Sijainti {
     private Ruutu[] ruudut = new Ruutu[12];
 

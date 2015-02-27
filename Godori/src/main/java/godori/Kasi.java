@@ -3,6 +3,11 @@ package godori;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka on Sijainti, joka kuvaa pelaajan kättä ja tarjoaa metodit käden 
+ * korttien käsittelyyn
+ * 
+ */
 public class Kasi implements Sijainti {
 
     private Kortti[] kortit;

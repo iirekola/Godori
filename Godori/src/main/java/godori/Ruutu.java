@@ -4,6 +4,9 @@ package godori;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka kuvaa pöydän yksittäistä sijaintia korteille
+ */
 public class Ruutu implements Sijainti {
     private List<Kortti> kortit;
     private String nimi;

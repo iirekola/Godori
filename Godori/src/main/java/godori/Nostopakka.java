@@ -4,6 +4,9 @@ package godori;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Luokka kuvaa Nostopakkaa ja sisältää tarvittavat metodit
+ */
 public class Nostopakka implements Sijainti {
     private List<Kortti> nostettavissaOlevat;
     

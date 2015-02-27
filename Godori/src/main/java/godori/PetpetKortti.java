@@ -1,5 +1,8 @@
 package godori;
 
+/**
+ * Kortti-luokan alaluokka, kuvaa Petpet typpisiä kortteja
+ */
 public class PetpetKortti extends Kortti {
     private boolean onLentava;
     private boolean onMaisema;

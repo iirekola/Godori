@@ -1,5 +1,9 @@
 package godori;
 
+
+/**
+ * Kortti-luokan alaluokka, kuvaa Altador Cup typpisiä kortteja
+ */
 public class AltadorCupKortti extends Kortti {
     private String tunnus;
     

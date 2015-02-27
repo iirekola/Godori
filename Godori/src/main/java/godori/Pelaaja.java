@@ -1,5 +1,8 @@
 package godori;
 
+/**
+ * Luokka kuvaa pelaajaa ja sisältää metodit käden ja voittopakan käsittelyyn
+ */
 public class Pelaaja {
     private String nimi;
     private Kasi kasi;

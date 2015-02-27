@@ -1,6 +1,9 @@
 
 package godori;
 
+/**
+ * Interface korttien sijainneille
+ */
 public interface Sijainti {
     @Override
     String toString();

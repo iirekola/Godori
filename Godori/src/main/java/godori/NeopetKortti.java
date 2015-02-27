@@ -1,5 +1,8 @@
 package godori;
 
+/**
+ * Kortti-luokan alaluokka, kuvaa Neopet typpisiä kortteja
+ */
 public class NeopetKortti extends Kortti {
     private boolean onHW;
     

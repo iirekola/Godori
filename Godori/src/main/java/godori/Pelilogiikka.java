@@ -1,5 +1,9 @@
 package godori;
 
+/**
+ * Ei mikään maailman fiksuin luokka, yhdistetty pelilogiikka ja tekstikäyttöliittymä
+ * Sisältää kaikki metodit toiminnallisuutta ja käyttöliittymää varten
+ */
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

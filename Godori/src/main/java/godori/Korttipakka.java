@@ -4,6 +4,9 @@ package godori;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * Luokka kuvaa täyttä kortipakkaa
+ */
 public class Korttipakka implements Sijainti{
     private ArrayList<Kortti> kortit;
     
