@@ -52,4 +52,6 @@ johtuneeko siitä, että testejä on liian vähän vai jostain muusta, sitä sel
 21.2.2015 22-02
 24.2.2015 22-01
 25.2.2015 9-11
-19.2.
+25.2.2015 20-01
+26.2.2015 19-01
+27.2015 18-00
