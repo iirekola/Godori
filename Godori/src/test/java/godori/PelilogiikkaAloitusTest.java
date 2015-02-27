@@ -20,7 +20,7 @@ public class PelilogiikkaAloitusTest {
     
     @Test
     public void luoKorttipakkaToimii() {
-        assertEquals(new Korttipakka(luoja.UusiPakka()).toString(), l.luoKorttipakka().toString());
+        assertEquals(new Korttipakka(luoja.uusiPakka()).toString(), l.luoKorttipakka().toString());
     }
     
     @Test

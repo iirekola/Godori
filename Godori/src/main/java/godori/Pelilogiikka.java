@@ -126,7 +126,7 @@ public class Pelilogiikka {
     public Korttipakka luoKorttipakka() {
         Korttienluoja kl = new Korttienluoja();
 
-        return new Korttipakka(kl.UusiPakka());
+        return new Korttipakka(kl.uusiPakka());
     }
 
     public void luoPelaajat(Scanner lukija) {
